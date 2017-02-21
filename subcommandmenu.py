@@ -1,5 +1,5 @@
+from mainmenu import *
 def subcommandmenu():
-    from mainmenu import *
     print ("""
         1 - Payload local dns poisoning
         2 - Password allusrpass changer
