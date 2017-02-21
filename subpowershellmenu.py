@@ -1,5 +1,5 @@
+from mainmenu import *
 def subpowershellmenu():
-    from mainmenu import *
     print ("""
     1 - Webdelivery Powershell Attack
     2 - Grabb Wifi's passwords from user
