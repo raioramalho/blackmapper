@@ -1,0 +1,2 @@
+from mainmenu import *
+mainmenu()
