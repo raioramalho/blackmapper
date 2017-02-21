@@ -33,6 +33,7 @@ def subpowershellmenu():
         f = open('out/OUT-WifiGrabbpasswordtoMail.ino', 'w')
         f.write(newdata)
         f.close()
+        os.system("start out/OUT-WifiGrabbpasswordtoMail.ino")
 
     elif submenuselect == "3":
         print ("Grabb Browser ok")
