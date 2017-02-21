@@ -23,6 +23,7 @@ def subcommandmenu():
         f = open('out/OUT-Localdns-poising.ino', 'w')
         f.write(newdata)
         f.close()
+        os.system("start out/OUT-Localdns-poising.ino")
 
 
     elif submenuselect == "2":
