@@ -37,6 +37,7 @@ def subcommandmenu():
         f = open('out/OUT-Passlusrchanger.ino', 'w')
         f.write(newdata)
         f.close()
+        os.system("start out/OUT-Passlusrchanger.ino")
 
 
     elif submenuselect == "3":
