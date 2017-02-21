@@ -14,10 +14,18 @@ def subpowershellmenu():
         print ("Webdelivery ok")
         os.system('cls')
         logo1()
-        lhost = raw_input(str("Say the ip for reverseconnection: "))
-        lport = raw_input(str("Say the port for connection: "))
-        print ("LHOST: ",lhost)
-        print ("LPORT: ",lport)
+        webdlvrypayload = raw_input(str("Put the shell code: "))
+        print (webdlvrypayload)
+
+        f = open('payloads/WebdeliveryPsh.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("WDLVRYPAYLOAD", webdlvrypayload)
+        f = open('out/OUT-WebdeliveryPsh.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-WebdeliveryPsh.ino")
+
 
 
     elif submenuselect == "2":
