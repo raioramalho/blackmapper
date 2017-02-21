@@ -18,7 +18,7 @@ def powershellmenu():
 def backdorringmenu():
     os.system('cls')
     logo1()
-    print ("Backdorring menu OK");
+    print ("Edit OK");
 
 
 
@@ -26,7 +26,7 @@ def pranksmenu():
     os.system('cls')
     logo1()
     subcommandmenu()
-    print ("Command menu OK");
+
 
 
 
