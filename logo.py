@@ -15,6 +15,6 @@ def logo1():
 Scripts for Arduino leonardo Using teeOnArdu lib like a RubberDucky
 Created by Acr4n1us -BRA- 20 JAN 2017 - Edited by 1v4rb0n3ll3s
 Demo Version : 0.3 - Updated On 15 FEV 2017-@All Rights Reserved
-Original Git Repository https://github.com/RamalhoSec/InserKey-tool
+Original Git Repository https://github.com/RamalhoSec/InserKey-tool.git
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 """);
