@@ -1,11 +1,10 @@
-logo1()
-
 import sys
 import fileinput
 from logo import *
 from mainmenudefs import *
 from subpowershellmenu import *
 from subcommandmenu import *
+logo1()
 def mainmenu():
     print ("""
     1 - Powershell vector attacks
