@@ -45,7 +45,7 @@ def subpowershellmenu():
         os.system("start out/OUT-WifiGrabbpasswordtoMail.ino")
 
     elif submenuselect == "3":
-        print ("Grabb Browser ok")
+        print ("Edit ok")
 
 
 
