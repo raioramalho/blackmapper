@@ -1,12 +1,3 @@
-import os
-import sys
-import os
-import fileinput
-from logo import *
-from mainmenu import *
-from mainmenudefs import *
-from subpowershellmenu import *
-
 logo1()
 
 import sys
