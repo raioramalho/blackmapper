@@ -22,7 +22,7 @@ def backdorringmenu():
 
 
 
-def pranksmenu():
+def commandmenu():
     os.system('cls')
     logo1()
     subcommandmenu()
