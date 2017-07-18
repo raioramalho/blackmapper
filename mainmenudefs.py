@@ -5,6 +5,7 @@ from logo import *
 from mainmenu import *
 from mainmenudefs import *
 from subpowershellmenu import *
+from subbackdorringmenu import *
 from subcommandmenu import *
 
 
@@ -18,7 +19,7 @@ def powershellmenu():
 def backdorringmenu():
     os.system('cls')
     logo1()
-    print ("Edit OK");
+    subbackdorringmenu();
 
 
 
