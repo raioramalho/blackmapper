@@ -22,7 +22,7 @@ def mainmenu():
     elif menuselect == "2":
         backdorringmenu()
     elif menuselect == "3":
-        pranksmenu()
+        commandmenu()
     else:
         os.system('cls')
         logo1()
