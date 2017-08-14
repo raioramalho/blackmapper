@@ -10,8 +10,11 @@ logo1()
 def mainmenu():
     print ("""
     1 - Powershell vector attacks
-    2 - Backdoor'ing exec attacks
+    2 - Backdoor'ing vector attacks
     3 - Command vector attacks
+    4 - Linux vector attacks
+    5 - Android vector attacks
+    6 - OSX vector attacks
     0 - InserKey Informmation
     """)
 
