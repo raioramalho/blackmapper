@@ -1,4 +1,10 @@
+import os
+import sys
+import fileinput
+from logo import *
+from mainmenudefs import *
 from mainmenu import *
+
 def subpowershellmenu():
     from mainmenu import mainmenu
     print ("""
@@ -46,6 +52,7 @@ def subpowershellmenu():
         os.system("start out/OUT-WifiGrabbpasswordtoMail.ino")
 
     elif submenuselect == "3":
+
         link = raw_input(str("Digite o link do backdoor : "))
         backdoor = raw_input(str("Digite o nome do arquivo : "))
         
@@ -60,20 +67,18 @@ def subpowershellmenu():
         os.system("start out/OUT-Psdownandexecute.ino")
 		
 		
-	elif submenuselect == "4":
-		link = raw_input(str("Digite o link pastebin : "))
-		essid = raw_input(str("Digite o nome da rede : "))
-		f = open('payloads/wifiassociationFast.ino', 'r')
-		filedata = f.read()
-		f.close()
-		newdata = filedata.replace("PASTEBIN", link).replace("ESSID", essid)
-		f = open('out/OUT-wifiassociationFast.ino', 'w')
-		f.write(newdata)
-		f.close()
-		os.system("start out/OUT-wifiassociationFast.ino")
+    elif submenuselect == "4":
+        link = raw_input(str("Digite o link pastebin : "))
+	essid = raw_input(str("Digite o nome da rede : "))
+	f = open('payloads/wifiassociationFast.ino', 'r')
+	filedata = f.read()
+	f.close()
+	newdata = filedata.replace("PASTEBIN", link).replace("ESSID", essid)
+	f = open('out/OUT-wifiassociationFast.ino', 'w')
+	f.write(newdata)
+	f.close()
+	os.system("start out/OUT-wifiassociationFast.ino")
 	
-
-
     elif submenuselect == "0":
         os.system('cls')
         logo1()
@@ -83,4 +88,3 @@ def subpowershellmenu():
         logo1()
         print ("Select one valid option!!")
         subpowershellmenu();
-

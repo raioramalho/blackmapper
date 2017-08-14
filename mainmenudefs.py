@@ -2,12 +2,10 @@ import os
 import sys
 import fileinput
 from logo import *
-from mainmenu import *
 from mainmenudefs import *
 from subpowershellmenu import *
 from subbackdorringmenu import *
 from subcommandmenu import *
-
 
 def powershellmenu():
     os.system('cls')
