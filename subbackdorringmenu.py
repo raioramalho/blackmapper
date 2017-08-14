@@ -3,7 +3,7 @@ def subbackdorringmenu():
     from mainmenu import mainmenu
     print ("""
         1 - Disable windows 7/8/10 Defender
-        2 - EDIT
+        2 - Iexplorer Fullscreen page attack
         3 - EDIT
         0 - Back to frist select menu
         """)
@@ -23,7 +23,15 @@ def subbackdorringmenu():
 
 
     elif submenuselect == "2":
-        print ("Edit ok")
+        url= raw_input(str("Digite o link desejado: "))
+        f = open('payloads/FullscreenIEpage.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("PRANKURL", url)
+        f = open('out/OUT-FullscreenIEpage.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-FullscreenIEpage.ino")
 
 
     elif submenuselect == "3":
