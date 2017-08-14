@@ -4,7 +4,8 @@ def subpowershellmenu():
     print ("""
     1 - Webdelivery Powershell Attack
     2 - Grabb Wifi's passwords from user
-    3 - Powershell Download and execute 
+    3 - Powershell Download and execute
+    4 - Wifi FAST Association and Connect
     0 - Back to frist select menu
     """)
 
@@ -57,7 +58,22 @@ def subpowershellmenu():
         f.write(newdata)
         f.close()
         os.system("start out/OUT-Psdownandexecute.ino")
+		
+		
+	elif submenuselect == "4":
+	    link = raw_input(str("Digite o link pastebin : "))
+        essid = raw_input(str("Digite o nome da rede : "))
+        print (newpass)
 
+        f = open('payloads/wifiassociationFast.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("PASTEBIN", link).replace("ESSID", essid)
+        f = open('out/OUT-wifiassociationFast.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-wifiassociationFast.ino")
+	
 
 
     elif submenuselect == "0":
