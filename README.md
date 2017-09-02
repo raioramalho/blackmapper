@@ -80,7 +80,7 @@ Port - Com Port of your Board
 
 # Credits
 
-1v4rb0nelles - RamalhoSec
+Dropping - RamalhoSec
 
 Acr4n1us - RamalhoSec
 
