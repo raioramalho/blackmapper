@@ -5,6 +5,7 @@ def subbackdorringmenu():
         1 - Disable windows 7/8/10 Defender
         2 - Iexplorer Fullscreen page attack
         3 - Paste Jacking Keyboard attack
+        4 - Youtube roll fullscreen attack
         0 - Back to frist select menu
         """)
 
@@ -44,6 +45,17 @@ def subbackdorringmenu():
         f.write(newdata)
         f.close()
         os.system("start out/OUT-PasteJackingattack.ino")
+        
+     elif submenuselect == "4":
+        url= raw_input(str("Digite o link do video desejado: "))
+        f = open('payloads/Youtuberollfullpage.ino', 'r')
+        filedata = f.read()
+        f.close()
+        newdata = filedata.replace("PRANKURL", url)
+        f = open('out/OUT-Youtuberollfullpage.ino', 'w')
+        f.write(newdata)
+        f.close()
+        os.system("start out/OUT-Youtuberollfullpage.ino")
 
 
     elif submenuselect == "0":
