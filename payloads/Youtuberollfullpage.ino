@@ -46,7 +46,7 @@ void pwn()
   openapp("cmd");
   delay(1000);
   Keyboard.println("start PRANKURL && exit");
-  delay(2500);
+  delay(4800);
   key(KEY_F , 0);
 
 }
