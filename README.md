@@ -68,7 +68,7 @@ Teensy 3.1+
 
 Board -  TeeOnArdu
 
-USBType - Serial + Keyboard + Mouse + Joystick
+USBType - Keyboard + Mouse + Joystick
 
 Keyboard Layout - Layout from your City
 
