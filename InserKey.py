@@ -10,6 +10,7 @@ from mainmenu import *
 op = raw_input(str("Deseja limpar os Payloads criados (S/N)?:"))
 if op == "S":
     os.system('del out\*.* /s /q')
+    os.system('del out\*.* /s /q')
     arq = open('out\README.md', 'w')
     texto = []
     texto.append('Here is when out-put Gennerated Payloads\n')
