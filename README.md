@@ -18,7 +18,7 @@ Payloads: x | Original Repo github.com/RamalhoSec/InserKey-tool.git
 Bitcoin = 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
 ```
 
-# InserKey
+# InserKey - python 2.7
 
 Scripts for Arduino leonardo Using teeOnArdu lib like a RubberDucky From hak5
 
