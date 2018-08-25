@@ -1,7 +1,7 @@
 #Created by Dropping - awak3ned@protonmail.com
 #Payloads: x | Original Repo github.com/RamalhoSec/InserKey-tool.git
-#Bitcoin = 13h3AWsVKx8fcFr6JRfroP3XZrkYwGyqGc
-#Etherium = 17skxdTJ47Ev3R2iha8C3qzmqJhCjBEhoW
+#Bitcoin = 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
+
 import os
 import sys
 import string
