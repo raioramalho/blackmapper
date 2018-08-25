@@ -46,8 +46,8 @@ def subbackdorringmenu():
         f.close()
         os.system("start out/OUT-PasteJackingattack.ino")
         
-     elif submenuselect == "4":
-        url= raw_input(str("Digite o link do video desejado: "))
+    elif submenuselect == "4":
+        url= raw_input(str("Digite o link desejado: "))
         f = open('payloads/Youtuberollfullpage.ino', 'r')
         filedata = f.read()
         f.close()
