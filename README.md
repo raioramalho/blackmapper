@@ -30,7 +30,7 @@ The Arduino Leonardo uses the ATmega 32U4 chip, which has the ability to emulate
 O Arduino Leonardo utiliza o chip ATmega 32U4, que possui a capacidade de emular um teclado HID USB, e com isso ele tem a propriedade de executar qualquer comando, uma vez inserido em uma porta USB na máquina-alvo.*
 ```
 Payloads are being developed based on teensy microcontroller codes.
-The attacks are diverse, from a simple backdoor to a sotisficado attack of social engineering
+The attacks are diverse, from a simple backdoor to a sotisficated attack of social engineering
 ```
 Os payloads estão sendo desenvolvidos baseados em codigos do microcontrolador teensy.
 os ataques são diversos, desde um simples backdoor a um ataque sotisficado de engenharia social*
