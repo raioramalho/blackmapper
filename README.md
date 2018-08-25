@@ -21,28 +21,28 @@ Bitcoin = 3DppKRbA9Um3z4wnmVtkqnETnvwsip7WkC
 # InserKey - python 2.7
 
 Scripts for Arduino leonardo Using teeOnArdu lib like a RubberDucky From hak5
-
+```
 Scripts para Arduino leonardo usando a lib TeeOnArdu para que trabalhe com  as
 funcionalidades do rubberducky*
-
+```
 The Arduino Leonardo uses the ATmega 32U4 chip, which has the ability to emulate a USB HID keyboard, and with that it has the property to execute any command once inserted into a USB port on the target machine.
-
+```
 O Arduino Leonardo utiliza o chip ATmega 32U4, que possui a capacidade de emular um teclado HID USB, e com isso ele tem a propriedade de executar qualquer comando, uma vez inserido em uma porta USB na máquina-alvo.*
-
+```
 Payloads are being developed based on teensy microcontroller codes.
 The attacks are diverse, from a simple backdoor to a sotisficado attack of social engineering
-
+```
 Os payloads estão sendo desenvolvidos baseados em codigos do microcontrolador teensy.
 os ataques são diversos, desde um simples backdoor a um ataque sotisficado de engenharia social*
-
+```
 My payloads can have a bug's
-
+```
 Meus paylaods podem ter alguns bug's*
-
+```
 The IDE for This project is in download topic with all Dependences !
-
+```
 O IDE para Este projeto está no indice downloads com todas as Dependências !*
-
+```
 
 # Compatible Boards
 
@@ -74,9 +74,9 @@ Keyboard Layout - Layout from your City
 
 Port - Com Port of your Board
 (NOTE!!! : The leornado's Boards, need a Reset Button, that need be press on 90% of send progress !! )
-
+```
 (OBSERVAÇÃO !!!: As placas do leornado, precisam de um botão de reset, que precisam ser pressionada em 90% do progresso de envio !!)
-
+```
 # Credits
 
 Dropping - RamalhoSec
@@ -136,7 +136,7 @@ LAYOUT_US_INTERNATIONAL
 
 # Downloads
 IDE portable of adafruit
-
+```
 IDE portatil da adafruit
-
+```
 https://www.dropbox.com/s/aibtwz1xr5a8tx9/arduino-1.6.4.rar?dl=0
