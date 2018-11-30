@@ -13,7 +13,7 @@ if op == "S":
     os.system('del out\*.* /s /q')
     arq = open('out\README.md', 'w')
     texto = []
-    texto.append('Here is when out-put Gennerated Payloads\n')
+    texto.append('Aqui é o local para os payloads\n')
     arq.writelines(texto)
     arq.close()
 else:
