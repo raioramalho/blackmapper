@@ -9,7 +9,7 @@ def subbackdorringmenu():
         0 - Back to frist select menu
         """)
 
-    submenuselect = raw_input(str("Say the option for show: "))
+    submenuselect = raw_input(str("Selecione uma opção: "))
 
     if submenuselect == "1":
         data= "RamalhoSec"
@@ -65,5 +65,5 @@ def subbackdorringmenu():
     else:
         os.system('cls')
         logo1()
-        print ("Select one valid option!!")
+        print ("Porfavor selecione uma opção valida!!")
         subbackdorringmenu();
