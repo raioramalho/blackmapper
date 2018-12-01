@@ -9,7 +9,7 @@ def subcommandmenu():
         0 - Back to frist select menu
         """)
 
-    submenuselect = raw_input(str("Say the option for show: "))
+    submenuselect = raw_input(str("Selecione uma opção: "))
 
     if submenuselect == "1":
         print ("local dns poisoning ok")
@@ -78,5 +78,5 @@ def subcommandmenu():
     else:
         os.system('cls')
         logo1()
-        print ("Select one valid option!!")
+        print ("Selecione uma opção valida!!")
         subcommandmenu();
