@@ -18,13 +18,13 @@ def subpowershellmenu():
     0 - Back to frist select menu
     """)
 
-    submenuselect = raw_input(str("Say the option for show: "))
+    submenuselect = raw_input(str("Selecione uma opção: "))
 
     if submenuselect == "1":
         print ("Webdelivery ok")
         os.system('cls')
         logo1()
-        webdlvrypayload = raw_input(str("Put the shell code: "))
+        webdlvrypayload = raw_input(str("Cole seu payload: "))
         print (webdlvrypayload)
 
         f = open('payloads/WebdeliveryPsh.ino', 'r')
@@ -127,5 +127,5 @@ def subpowershellmenu():
     else:
         os.system('cls')
         logo1()
-        print ("Select one valid option!!")
+        print ("Selecione uma opção valida!!")
         subpowershellmenu();
