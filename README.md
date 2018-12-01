@@ -80,8 +80,6 @@ Port - Com Port of your Board
 ```
 # Credits
 
-Dropping - RamalhoSec
-
 Acr4n1us - RamalhoSec
 
 TradeCrafter - DuckyBR
