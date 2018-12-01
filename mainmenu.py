@@ -18,7 +18,7 @@ def mainmenu():
     0 - [OK]InserKey Informmation
     """)
 
-    menuselect = raw_input(str("Say the option for show: "))
+    menuselect = raw_input(str("Selecione uma opção: "))
 
     if menuselect == "0":
         inserkeyinformenu()
@@ -31,7 +31,7 @@ def mainmenu():
     else:
         os.system('cls')
         logo1()
-        print ("Select one valid option!!")
+        print ("Porfavor Selecione uma opção valida!!")
         mainmenu()
 
 
