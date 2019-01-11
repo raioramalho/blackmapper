@@ -1,0 +1,26 @@
+v1.0: qui 27 dez 2018 18:20:51 > Declared Changelog.
+v1.0: qui 27 dez 2018 18:21:02 > Declared License.
+v1.0: qui 27 dez 2018 18:21:11 > Declared Readme.md.
+v1.0: qui 27 dez 2018 18:21:35 > Declared Blackmapper Binary.
+v1.0: qui 27 dez 2018 18:28:30 > Declared payloads folder.
+v1.0: qui 27 dez 2018 19:02:35 > Declared payloads.x files.
+v1.0: sex 28 dez 2018 11:42:13 > Start code structure.
+v1.0: sáb 29 dez 2018 20:02:30 > Edit Readme.md text error.
+v1.0: Sex 04 Jan 2019 09:32:45 > Start edit arguments.
+v1.0: Sex 04 Jan 2019 09:42:59 > Help function enabled.
+v1.0: dom 06 jan 2019 00:37:30 > Edit logo and help panel.
+v1.0: dom 06 jan 2019 00:42:48 > Added tmp folder for out payloads.
+v1.0: seg 07 jan 2019 19:59:56 > Enabled two payload functions.
+v1.0: seg 07 jan 2019 20:00:43 > Enabled Prompt execute command payload.
+v1.0: seg 07 jan 2019 20:01:00 > Enabled Helloworld payload.
+v1.0: seg 07 jan 2019 20:01:37 > Enabled Localdnschanger payload.
+v1.0: seg 07 jan 2019 20:10:09 > Enabled Passwordchanger payload.
+v1.0: seg 07 jan 2019 20:14:49 > Enabled Pastejacking payload.
+v1.0: seg 07 jan 2019 20:21:08 > Enabled Wifigrabbtomail payload.
+v1.0: seg 07 jan 2019 23:53:27 > Enable Prank url payload.
+v1.0: seg 07 jan 2019 23:56:05 > Enable Yotuberoll prank payload.
+v1.0: ter 08 jan 2019 00:10:25 > Enable Webdelivery exploit payload.
+v1.0: ter 08 jan 2019 13:33:20 > Enable Disable defender payload.
+v1.0: ter 08 jan 2019 13:34:13 > Enable Download bin payload.
+v1.0: sex 11 jan 2019 19:21:33 > Fix Powershell exec command menu error.
+v1.0: sex 11 jan 2019 19:42:45 > Enabled a full ps exec menu.

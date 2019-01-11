@@ -1,0 +1,227 @@
+#!/usr/bin/env bash
+# encoding utf-8
+# Author: Alan ramalho (https://gitlab.com/raioramalho)
+
+
+
+#::Cheking Dependence
+[ $(which sed) ] && sleep 0.1 || echo  "Please install sed."
+[ $(which tr) ] && sleep 0.1 || echo  "Please install tr."
+##################################################
+
+
+
+#::Defining Global Variable
+v_date="$(date +%c | sed 's/ -02//')"
+##################################################
+
+
+
+#::Global Function
+f_logo() {
+    printf "
+Blackmapper v1.0 (https://gitlab.com/raioramalho/blackmapper)
+
+Framework to inject codes physically woth arduino, pic and tensy boards.
+This tool has been translated from Portuguese[br] into English[us].
+I do not take responsibility for your actions.\n"
+}
+
+
+
+f_help() {
+    printf "
+Usage: blackmapper -h or --help
+
+Global Options:
+	--help <>: Show this screen.
+	-h <>: Show this screen too.
+
+Compatible boards:
+    Arduino Leonardo: (Need a reset button!)
+    Arduino Leonardo Micro: (Need a reset button!)
+    Arduino Pro Micro: (Need a reset button!)
+    Arduino CJMCU Beetle: (Need a reset button!)
+    Arduino Tiny USB ATMEGA32U4: (Need a reset button!)
+
+    Teensy: 2.0, 2.0++, 3.0, 3.1++
+
+Setup IDE:
+    IDE from adafruit with TeeOnArdu LIB: (https://www.dropbox.com/s/aibtwz1xr5a8tx9/arduino-1.6.4.rar?dl=0)
+    Board: TeeOnArdu.
+    USBType: Keyboard+Mouse+Joystick.
+    Keyboard Layout: Layout from your city.
+    Port: Com port of your board.
+
+Credits:
+    Alan Ramalho @raioramalho (www.gitlab.com/raioramalho)
+    Acr4n1us
+    RamalhoSec
+    DuckyBR @TradeCrafter (www.github.com/tradecrafter)\n"
+}
+
+
+
+f_mainmenu() {
+    f_logo
+    printf "
+
+Listing categories:\n
+1:Prompt execute command.
+2:Prompt prank command.
+3:Prompt exploit command.
+4:Powershell execute command.
+5:Powershell prank command.
+6:Powershell exploit command.\n
+0:Exit framework.\n
+Select a category: "
+
+    read op
+    case $op in
+        0)exit 0;;
+        1)clear; f_logo; f_pecmenu;;
+        2)clear; f_logo; f_prcmenu;;
+        3)clear; f_logo; f_pexcmenu;;
+        4)clear; f_logo; f_psecmenu;;
+    esac
+}
+
+
+
+f_pecmenu() {
+    printf "
+Listing payloads templates to use:\n
+$(ls payloads/ | grep -n cmd-exec)\n
+0:back to main.\n
+Select a payload: "
+
+    read op
+    case $op in
+        0)clear; f_mainmenu;;
+        1)
+            printf "Digit the new Hello world text: ";read input;
+            payload="$(ls payloads/ | grep -n cmd-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/Hello world/$input/" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        2)
+            printf "Set the Url target host: ";read url;
+            printf "Set the Ip address for spoof: ";read addr;
+            payload="$(ls payloads/ | grep -n cmd-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/IPDLVR/$addr/" | sed "s/LINKDLVR/$url/" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        3)
+            printf "Set the new Administrator password: ";read pass;
+            payload="$(ls payloads/ | grep -n cmd-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/NEWPASS/$pass/" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        4)
+            printf "Set the url of Pastejacking link: ";read jack;
+            payload="$(ls payloads/ | grep -n cmd-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/JACKSITE//" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        5)
+            printf "Set the configured google email: ";read email;
+            printf "Set your password: ";read pass;
+            payload="$(ls payloads/ | grep -n cmd-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/EMAIL@gmail.com/$email/g" | sed "s/EMAIL/$email/" | sed "s/PASSWORD/$pass/g" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+    esac
+}
+
+
+
+f_prcmenu() {
+    printf "
+Listing payloads templates to use:\n
+$(ls payloads/ | grep -n cmd-prank)\n
+0:back to main.\n
+Select a payload: "
+    
+    read op
+    case $op in
+        0)clear; f_mainmenu;;
+        7)
+            printf "Set the Prankurl: ";read url;
+            payload="$(ls payloads/ | grep -n cmd-prank | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/PRANKURL/$url/" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        8)
+            printf "Set the Prankurl: ";read url;
+            payload="$(ls payloads/ | grep -n cmd-prank | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/PRANKURL/$url/" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+    esac
+}
+
+
+
+f_pexcmenu() {
+    printf "
+Listing payloads templates to use:\n
+$(ls payloads/ | grep -n cmd-exploit)\n
+0:back to main.\n
+Select a payload: "
+
+    read op
+    case $op in
+        0)clear; f_mainmenu;;
+        6)
+            printf "Insert the Webdelivery code: ";read exploit;
+            payload="$(ls payloads/ | grep -n cmd-exploit | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/WDLVRYPAYLOAD/$exploit/" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+    esac
+}
+
+
+
+f_psecmenu() {
+    printf "
+Listing payloads templates to use:\n
+$(ls payloads/ | grep -n ps-exec)\n
+0:back to main.\n
+Select a payload: "
+
+    read op
+    case $op in
+        0)clear; f_mainmenu;;
+        9)
+            payload="$(ls payloads/ | grep -n ps-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        10)
+            printf "Insert the url host of your binary: ";read url;
+            printf "Insert the name of your binary: ";read bin;
+            payload="$(ls payloads/ | grep -n ps-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/PAYLOAD/$bin/g" | sed "s/HOST/$url/g" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        11)
+            printf "Insert the url host of your binary: ";read url;
+            printf "Insert the name of your binary: ";read bin;
+            payload="$(ls payloads/ | grep -n ps-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/PAYLOAD/$bin/g" | sed "s/HOST/$url/g" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        12)
+            printf "Insert the name of wireless AP: ";read essid;
+            printf "Insert a password for AP: ";read passwd;
+            payload="$(ls payloads/ | grep -n ps-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/ESSID/$essid/g" | sed "s/PASSWORD/$passwd/g" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+        13)
+            printf "Please insert the wireless name: ";read essid;
+            printf "Insert the link of xml AP configs: ";read url;
+            payload="$(ls payloads/ | grep -n ps-exec | grep $op | sed "s/$op://")";
+            cat payloads/$payload | sed "s/ESSID/$essid/g" | sed "s/PASTEBIN/$url/g" > tmp/payload.ino;
+            ls -lsha tmp/payload.ino;;
+    esac
+}
+##################################################
+
+
+
+#::Arguments Menu
+case $1 in
+	-h|--help)f_logo; f_help;;
+	*)clear; rm -rf tmp/*;f_mainmenu;;
+esac
+##################################################
