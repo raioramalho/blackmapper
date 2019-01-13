@@ -20,24 +20,24 @@ v_date="$(date +%c | sed 's/ -02//')"
 #::Global Function
 f_logo() {
     printf "
-Blackmapper v1.0 (https://gitlab.com/raioramalho/blackmapper)
+    Blackmapper v1.0 (https://gitlab.com/raioramalho/blackmapper)
 
-Framework to inject codes physically woth arduino, pic and tensy boards.
-This tool has been translated from Portuguese[br] into English[us].
-I do not take responsibility for your actions.\n"
+    Framework to inject codes physically woth arduino, pic and tensy boards.
+    This tool has been translated from Portuguese[br] into English[us].
+    I do not take responsibility for your actions.\n"
 }
 
 
 
 f_help() {
     printf "
-Usage: blackmapper -h or --help
+    Usage: blackmapper -h or --help
 
-Global Options:
-	--help <>: Show this screen.
-	-h <>: Show this screen too.
+    Global Options:
+    --help <>: Show this screen.
+    -h <>: Show this screen too.
 
-Compatible boards:
+    Compatible boards:
     Arduino Leonardo: (Need a reset button!)
     Arduino Leonardo Micro: (Need a reset button!)
     Arduino Pro Micro: (Need a reset button!)
@@ -46,14 +46,14 @@ Compatible boards:
 
     Teensy: 2.0, 2.0++, 3.0, 3.1++
 
-Setup IDE:
+    Setup IDE:
     IDE from adafruit with TeeOnArdu LIB: (https://www.dropbox.com/s/aibtwz1xr5a8tx9/arduino-1.6.4.rar?dl=0)
     Board: TeeOnArdu.
     USBType: Keyboard+Mouse+Joystick.
     Keyboard Layout: Layout from your city.
     Port: Com port of your board.
 
-Credits:
+    Credits:
     Alan Ramalho @raioramalho (www.gitlab.com/raioramalho)
     Acr4n1us
     RamalhoSec
@@ -66,15 +66,15 @@ f_mainmenu() {
     f_logo
     printf "
 
-Listing categories:\n
-1:Prompt execute command.
-2:Prompt prank command.
-3:Prompt exploit command.
-4:Powershell execute command.
-5:Powershell prank command.
-6:Powershell exploit command.\n
-0:Exit framework.\n
-Select a category: "
+    Listing categories:\n
+    1:Prompt execute command.
+    2:Prompt prank command.
+    3:Prompt exploit command.
+    4:Powershell execute command.
+    5:Powershell prank command.
+    6:Powershell exploit command.\n
+    0:Exit framework.\n
+    Select a category: "
 
     read op
     case $op in
@@ -90,10 +90,10 @@ Select a category: "
 
 f_pecmenu() {
     printf "
-Listing payloads templates to use:\n
-$(ls payloads/ | grep -n cmd-exec)\n
-0:back to main.\n
-Select a payload: "
+    Listing payloads templates to use:\n
+    $(ls payloads/ | grep -n cmd-exec)\n
+    0:back to main.\n
+    Select a payload: "
 
     read op
     case $op in
@@ -132,11 +132,11 @@ Select a payload: "
 
 f_prcmenu() {
     printf "
-Listing payloads templates to use:\n
-$(ls payloads/ | grep -n cmd-prank)\n
-0:back to main.\n
-Select a payload: "
-    
+    Listing payloads templates to use:\n
+    $(ls payloads/ | grep -n cmd-prank)\n
+    0:back to main.\n
+    Select a payload: "
+
     read op
     case $op in
         0)clear; f_mainmenu;;
@@ -157,10 +157,10 @@ Select a payload: "
 
 f_pexcmenu() {
     printf "
-Listing payloads templates to use:\n
-$(ls payloads/ | grep -n cmd-exploit)\n
-0:back to main.\n
-Select a payload: "
+    Listing payloads templates to use:\n
+    $(ls payloads/ | grep -n cmd-exploit)\n
+    0:back to main.\n
+    Select a payload: "
 
     read op
     case $op in
@@ -177,10 +177,10 @@ Select a payload: "
 
 f_psecmenu() {
     printf "
-Listing payloads templates to use:\n
-$(ls payloads/ | grep -n ps-exec)\n
-0:back to main.\n
-Select a payload: "
+    Listing payloads templates to use:\n
+    $(ls payloads/ | grep -n ps-exec)\n
+    0:back to main.\n
+    Select a payload: "
 
     read op
     case $op in
@@ -221,7 +221,7 @@ Select a payload: "
 
 #::Arguments Menu
 case $1 in
-	-h|--help)f_logo; f_help;;
-	*)clear; rm -rf tmp/*;f_mainmenu;;
+    -h|--help)f_logo; f_help;;
+    *)clear; rm -rf tmp/*;f_mainmenu;;
 esac
 ##################################################
